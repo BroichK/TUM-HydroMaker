@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Rain Gauge and Button on boot
+After=multi-user.target
+[Service]
+WorkingDirectory=/home/pi
+Type=idle
+User=pi
+ExecStart=/usr/bin/python3 /home/pi/raingauge.py
+Restart=always
+[Install]
+WantedBy=multi-user.target
